@@ -1,0 +1,13 @@
+// ----------------------------------------------
+// Typography
+// ----------------------------------------------
+
+// create typography in any another of porpose.
+
+h1.main-title {
+    font-size: 80px;
+    width: 600px;
+    font-family: $secondary-font;
+    font-weight: 300;
+    padding: 60px 80px;
+}

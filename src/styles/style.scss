@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+// -----------------------------------------------------------------------------------------------------------
+// Settings - Global variables like fonts and colors.
+// -----------------------------------------------------------------------------------------------------------
+@import '1-settings/colors';//............................................Grab all of our brand colors in one go.
+@import '1-settings/fonts';//.............................................Set all font-family after Generate font face.
+@import '1-settings/variables';//.........................................Create all the default values in variables.
+@import '1-settings/global';//............................................Grab all of our default settings in one go.
+@import '1-settings/typography';//........................................Default typography settings for theme.
+
+
+// -----------------------------------------------------------------------------------------------------------
+// Tools - Default mixins.
+// -----------------------------------------------------------------------------------------------------------
+@import '2-tools/media-queries';//........................................Media query mixin for responsive design.
+@import '2-tools/mixins';//...............................................Define styles that can be re-used throughout your stylesheet.
+@import '2-tools/animation';//............................................All animation style css go here.
+@import '2-tools/paths';//................................................Simple Asset Helper Functions.
+@import '2-tools/modifier';//.............................................To changes quickly use modifier.
+
+
+// -----------------------------------------------------------------------------------------------------------
+// Generic - Ground-zero styles (resets, box-sizing, etc.).
+// -----------------------------------------------------------------------------------------------------------
+@import '3-generic/box-sizing';//.........................................Better default box-sizing rules.
+@import '3-generic/normalize';//..........................................Snapshot of Normalize.css as of v5.0.0.
+@import '3-generic/reset';//..............................................Small reset on top of Normalize.css.
+@import '3-generic/shared';//.............................................Share vertical rhythm etc. across multiple elements.
+
+
+// -----------------------------------------------------------------------------------------------------------
+// Components - specific UI components.
+// -----------------------------------------------------------------------------------------------------------
+@import '4-components/button/buttons';//.............................................Share vertical rhythm etc. across multiple elements.
+@import '4-components/layout/page/front-page';//.............................................Share vertical rhythm etc. across multiple elements.
+@import '4-components/layout/navigation';//.............................................Share vertical rhythm etc. across multiple elements.
+@import '4-components/layout/header';//.............................................Share vertical rhythm etc. across multiple elements.
+
+// -----------------------------------------------------------------------------------------------------------
+// Objects - specific layout related.
+// -----------------------------------------------------------------------------------------------------------
+@import '5-objects/flex-grid';//.............................................Share vertical rhythm etc. across multiple elements.

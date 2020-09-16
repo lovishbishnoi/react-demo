@@ -1,0 +1,32 @@
+html {
+    height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+#root {
+  height: 100%
+}
+
+.page {
+    height: 100%;
+}
+
+.front-page {
+  background-image: url("https://res.cloudinary.com/nickelcdn/image/upload/v1592925984/home-page_BG_2_1_yb9tg9.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.inner-page {
+  background-image: url("https://res.cloudinary.com/nickelcdn/image/upload/v1593174277/2434_irjqzn.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .site-logo img {
+      background-color: #fff;
+  }
+}
