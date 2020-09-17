@@ -1,48 +1,30 @@
 // webpack.config.js
 var path = require ('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 
 const PATH_SOURCE = path.join(__dirname, './src');
 const PATH_DIST = path.join(__dirname, './dist');
 
-module.exports = env => {
+const htmlWebPack = new HtmlWebpackPlugin({
+    template: path.join(PATH_SOURCE, '/assets/index.html'),
+});
 
-  const environment = env.environment;
-  const isProduction = environment === 'production';
-  const isDevelopment = environment === 'development';
+const extractCss = new MiniCssExtractPlugin({
+    filename: 'assets/css/style.min.css',
+    chunkFilename: 'assets/css/bootstrap.min.css',
+});
 
-  return {
-    mode: environment,
+module.exports = {
+
+    entry: [
+        path.join(PATH_SOURCE, './index.jsx'),
+      ],
+  
     resolve: {
       extensions: [".jsx", ".js"]
     },
-
-    devServer: {
-      // The dev server will serve content from this directory.
-      contentBase: PATH_DIST,
-
-      // Specify a host. (Defaults to 'localhost'.)
-      host: 'localhost',
-
-      // Specify a port number on which to listen for requests.
-      port: 8080,
-
-      // When using the HTML5 History API (you'll probably do this with React
-      // later), index.html should be served in place of 404 responses.
-      historyApiFallback: true,
-
-      // Show a full-screen overlay in the browser when there are compiler
-      // errors or warnings.
-      overlay: {
-        errors: true,
-        warnings: true,
-      },
-    },
-
-    entry: [
-      path.join(PATH_SOURCE, './index.jsx'),
-    ],
 
     output: {
       path: PATH_DIST,
@@ -97,10 +79,7 @@ module.exports = env => {
     },
 
     plugins: [
-      new HtmlWebpackPlugin({
-        template: path.join(PATH_SOURCE, './index.html'),
-      }),
+      htmlWebPack,
+      extractCss,
     ],
-
-  };
 };
